@@ -1,22 +1,6 @@
 import axios from 'axios';
 import { SidebarItem, SidebarLink, SidebarSection } from '@/types/sidebar';
 
-axios.interceptors.request.use((config) => {
-    console.log('Requisição Axios:', config);
-    return config;
-});
-
-axios.interceptors.response.use(
-    (response) => {
-        console.log('Resposta Axios:', response.data);
-        return response;
-    },
-    (error) => {
-        console.error('Erro na resposta Axios:', error);
-        return Promise.reject(error);
-    }
-);
-
 const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 if (!BASE_URL) {
