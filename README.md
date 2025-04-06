@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alintra Markdown Editor
 
-## Getting Started
+Um editor de markdown com suporte a edição local e visualização em tempo real. Desenvolvido com Next.js, TypeScript e Tailwind CSS.
 
-First, run the development server:
+## 🚀 Funcionalidades
 
+- 📝 Visualização e edição de arquivos Markdown
+- 💾 Armazenamento local de alterações
+- 🔄 Indicador de sincronização
+- 📊 Painel administrativo com diff de alterações
+- 🌲 Navegação estruturada via sidebar
+- ✨ Suporte a GitHub Flavored Markdown (GFM)
+
+## 📋 Pré-requisitos
+
+- Node.js (versão 18 ou superior)
+- npm (gerenciador de pacotes do Node.js)
+
+## 🛠️ Instalação
+
+1. Clone o repositório:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone [URL_DO_REPOSITORIO]
+cd alintra-markdown
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instale as dependências:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Configure as variáveis de ambiente:
+```bash
+cp .env.example .env
+```
+Edite o arquivo `.env` com suas configurações:
+```plaintext
+NEXT_PUBLIC_API_BASE_URL=sua_url_da_api
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+```
 
-## Learn More
+## 🏗️ Estrutura do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                    # Rotas e páginas
+├── components/            # Componentes React
+├── hooks/                # Hooks customizados
+├── services/            # Serviços e APIs
+└── types/              # Definições de tipos TypeScript
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Tecnologias Utilizadas
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js** - Framework React
+- **TypeScript** - Linguagem de programação
+- **Tailwind CSS** - Framework CSS
+- **React Markdown** - Renderização de Markdown
+- **Axios** - Cliente HTTP
+- **diff** - Comparação de textos
 
-## Deploy on Vercel
+## 📄 Funcionalidades Detalhadas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Modo de Visualização
+- Renderização de Markdown com suporte a GFM
+- Estilização consistente com Tailwind Typography
+- Navegação via sidebar estruturada
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Modo de Edição
+- Editor de texto em tela cheia
+- Salvamento automático local
+- Indicador de alterações não sincronizadas
+
+### Painel Administrativo
+- Lista de documentos editados
+- Visualização de diferenças (diff)
+- Histórico de modificações
